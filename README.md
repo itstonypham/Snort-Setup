@@ -3,7 +3,7 @@
   ![Description](https://raw.githubusercontent.com/itstonypham/Snort-Setup/refs/heads/images/download.png)
 
 ## 📌 Overview
-Comprehensive Guide to Snort Intrusion Detection and Prevention Setup  
+Comprehensive Guide to Snort Intrusion Detection and Prevention Setup.  
 <br>
 
 ## 🐷 Why Use Snort?
@@ -69,7 +69,7 @@ Regular updates help stay protected against new threats.
    ```bash
    sudo nano /etc/snort/rules/local.rules
    ```
-- For example, add a rule to detect pings:
+- For example, add a rule to detect pings:  
 alert icmp any any -> $HOME_NET any (msg: "ICMP PING DETECTED"; sid:1000001; rev:1;)
 
   ![Description](https://raw.githubusercontent.com/itstonypham/Snort-Setup/refs/heads/images/image6.png)

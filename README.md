@@ -11,13 +11,13 @@ Snort is a popular, open-source Intrusion Detection and Prevention System (IDS/I
 <br>
 
 ## ✨ How This Helps
-**Real-Time Monitoring**  
+- **Real-Time Monitoring**  
 Snort watches network traffic and alerts to any suspicious activity.
 
-**Customizable Alerts**  
+- **Customizable Alerts**  
 Rules can be tailored to detect specific threats relevant to the network.
 
-**Community Rules**  
+- **Community Rules**  
 Regular updates help stay protected against new threats.  
 <br>
 

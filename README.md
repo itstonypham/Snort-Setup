@@ -30,6 +30,8 @@ Regular updates help stay protected against new threats.
    ```bash
    snort --version
    ```
+   ![Description](https://raw.githubusercontent.com/itstonypham/Snort-Setup/refs/heads/images/image4.png)
+
 ## 🎮 Usage
 - Describe how to use the project
 - Example command-line usage:

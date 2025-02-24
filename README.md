@@ -1,14 +1,16 @@
 # Snort-Setup
 
-![Project Logo](https://webobjects2.cdw.com/is/image/CDW/3521758?$product-main$) 
+  ![Description](https://raw.githubusercontent.com/itstonypham/Snort-Setup/refs/heads/images/download.png)
 
-## 🚀 Overview
-Comprehensive Guide to Snort Intrusion Detection and Prevention Setup
+## 📌 Overview
+Comprehensive Guide to Snort Intrusion Detection and Prevention Setup  
+<br>
 
-## 🔥 Why Use Snort?
-Snort is a popular, open-source Intrusion Detection and Prevention System (IDS/IPS) that monitors network traffic to spot and stop suspicious activity, keeping systems safe. This guide will help you set up and run Snort on Ubuntu.
+## 🐷 Why Use Snort?
+Snort is a popular, open-source Intrusion Detection and Prevention System (IDS/IPS) that monitors network traffic to spot and stop suspicious activity, keeping systems safe. This guide will help you set up and run Snort on Ubuntu.  
+<br>
 
-## 🔥 How This Helps
+## ✨ How This Helps
 **Real-Time Monitoring**  
 Snort watches network traffic and alerts to any suspicious activity.
 
@@ -16,7 +18,8 @@ Snort watches network traffic and alerts to any suspicious activity.
 Rules can be tailored to detect specific threats relevant to the network.
 
 **Community Rules**  
-Regular updates help stay protected against new threats.
+Regular updates help stay protected against new threats.  
+<br>
 
 ## 🛠️ Installation
 ### Step 1: Install Snort
@@ -30,78 +33,73 @@ Regular updates help stay protected against new threats.
    ```bash
    snort --version
    ```
-   ![Description](https://raw.githubusercontent.com/itstonypham/Snort-Setup/refs/heads/images/image4.png)
+  ![Description](https://raw.githubusercontent.com/itstonypham/Snort-Setup/refs/heads/images/image4.png)
+  ![Description](https://raw.githubusercontent.com/itstonypham/Snort-Setup/refs/heads/images/image1.png)
 
-## 🎮 Usage
-- Describe how to use the project
-- Example command-line usage:
+  ### Step 2: Enable Promiscuous Mode
+- Check your network interface:
+
    ```bash
-   python script.py --option value
+   ip a
    ```
+- Enable Snort to see all network traffic:
+    ```bash
+   sudo ip link set <your_network_interface> promisc on
+   ```
+- Replace <your_network_interface> with your network interface name.
+  ![Description](https://raw.githubusercontent.com/itstonypham/Snort-Setup/refs/heads/images/image8.png)
+  ![Description](https://raw.githubusercontent.com/itstonypham/Snort-Setup/refs/heads/images/image3.png)
+  
+  ### Step 3: Configure Snort
+- Snort files are in /etc/snort. Make a backup:
 
-## 🔍 Intrusion Detection with Snort
-Snort is an open-source IDS/IPS that helps monitor and prevent malicious network activity. Below are the steps to install and configure Snort on Ubuntu.
+   ```bash
+   sudo cp /etc/snort/snort.conf /etc/snort/snort.conf.backup
+   ```
+- Edit snort.conf to set HOME_NET to your network range:
+    ```bash
+   sudo nano /etc/snort/snort.conf
+    ```
+  ![Description](https://raw.githubusercontent.com/itstonypham/Snort-Setup/refs/heads/images/image9.png)
+  ![Description](https://raw.githubusercontent.com/itstonypham/Snort-Setup/refs/heads/images/image13.png)
 
-### 📌 Steps to Install & Set Up Snort
-#### Step 1: Install Snort
-```bash
-sudo apt-get install snort -y
-```
-- Set `HOME_NET` to your network (e.g., `192.168.0.0/24`).
-- Verify installation:
-```bash
-snort --version
-```
+  ### Step 4: Add Custom Rules
+- Open local.rules to add custom rules:
 
-#### Step 2: Enable Promiscuous Mode
-```bash
-ip a  # Check network interface
-sudo ip link set <your_network_interface> promisc on
-```
-Replace `<your_network_interface>` with your actual interface name.
-
-#### Step 3: Configure Snort
-```bash
-sudo cp /etc/snort/snort.conf /etc/snort/snort.conf.backup
-sudo nano /etc/snort/snort.conf
-```
-Set `HOME_NET` to your network range.
-
-#### Step 4: Add Custom Rules
-Edit `local.rules` to define custom detections:
-```bash
-sudo nano /etc/snort/rules/local.rules
-```
-Example rule to detect pings:
-```bash
+   ```bash
+   sudo nano /etc/snort/rules/local.rules
+   ```
+- For example, add a rule to detect pings:
 alert icmp any any -> $HOME_NET any (msg: "ICMP PING DETECTED"; sid:1000001; rev:1;)
-```
 
-#### Step 5: Run Snort
-```bash
-sudo snort -q -l /var/log/snort -i <your_network_interface> -A console -c /etc/snort/snort.conf
-```
-When Snort detects a ping, it logs and alerts administrators.
+  ![Description](https://raw.githubusercontent.com/itstonypham/Snort-Setup/refs/heads/images/image6.png)
+  ![Description](https://raw.githubusercontent.com/itstonypham/Snort-Setup/refs/heads/images/image11.png)
+  ![Description](https://raw.githubusercontent.com/itstonypham/Snort-Setup/refs/heads/images/image5.png)
 
-## 📸 Screenshots
-![Screenshot 1](https://your-image-link.com)
-![Screenshot 2](https://your-image-link.com)
+  ### Step 5: Run Snort
+- Start Snort to see alerts in real-time:
 
-## 🔒 Security Considerations
-- Regularly update Snort rules.
-- Monitor logs for suspicious activity.
+   ```bash
+   sudo snort -q -l /var/log/snort -i <your_network_interface> -A console -c /etc/snort/snort.conf
+   ```
+- Replace <your_network_interface> with your network interface name.
+- When Snort spots a ping request, it triggers an alert saying "ICMP PING DETECTED" and logs details about it. This helps keep an eye on any unusual activity on the network.
 
-## 📜 License
-This project is licensed under the [MIT License](LICENSE).
+  ![Description](https://raw.githubusercontent.com/itstonypham/Snort-Setup/refs/heads/images/image7.png)
+  ![Description](https://raw.githubusercontent.com/itstonypham/Snort-Setup/refs/heads/images/image2.png)  
+<br>
+
+## 🔚 Conclusion
+- Now that Snort is set up, it can spot and get alerts on any suspicious network activity. Keeping an eye on it and updating regularly will help keep the network safe.
 
 ## 👤 Author
-- **Your Name** – [GitHub](https://github.com/your-username) | [LinkedIn](https://linkedin.com/in/your-profile)
+- **Tony Pham** – [GitHub](https://github.com/itstonypham) | [LinkedIn](https://www.linkedin.com/in/itstonypham/)
 
 ## 🤝 Contributing
-Pull requests are welcome. For major changes, please open an issue first to discuss.
+Pull requests are welcome. For major changes, please open an issue first to discuss.  
+
 
 ## ⭐ Acknowledgments
 - Thanks to contributors and resources that helped with the project.
 
 ---
-Feel free to modify this `README.md` with relevant information!

@@ -1,6 +1,6 @@
 # Snort-Setup
 
-![Project Logo](https://your-image-link.com)  
+[![Project Logo](https://your-image-link.com)](https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSeMY4TDCWSeYc7qDbKu-VvxBYsMXwY3MKfCw&s)  
 Snort Intrusion Detection/Prevention Setup Guide
 
 ## 🚀 Overview

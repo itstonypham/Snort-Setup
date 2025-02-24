@@ -1,7 +1,6 @@
 # Snort-Setup
 
-  <img src="https://raw.githubusercontent.com/itstonypham/Snort-Setup/refs/heads/images/download.png" alt="Description" width="30%">
-
+  <img src="https://raw.githubusercontent.com/itstonypham/Snort-Setup/refs/heads/images/download.png" alt="Description" width="35%">
 
 ## 📌 Overview
 Comprehensive Guide to Snort Intrusion Detection and Prevention Setup.  

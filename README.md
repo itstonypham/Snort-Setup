@@ -1,10 +1,9 @@
 # Snort-Setup
 
-[![Project Logo](https://your-image-link.com)](https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSeMY4TDCWSeYc7qDbKu-VvxBYsMXwY3MKfCw&s)  
-Snort Intrusion Detection/Prevention Setup Guide
+![Project Logo](https://webobjects2.cdw.com/is/image/CDW/3521758?$product-main$) 
 
 ## 🚀 Overview
-A short description of what your project does, its purpose, and why it's useful.
+Comprehensive Guide to Snort Intrusion Detection and Prevention Setup
 
 ## 🔥 Features
 - ✅ Feature 1

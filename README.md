@@ -5,36 +5,31 @@
 ## 🚀 Overview
 Comprehensive Guide to Snort Intrusion Detection and Prevention Setup
 
-## 🔥 Features
-- ✅ Feature 1
-- ✅ Feature 2
-- ✅ Feature 3
-- ✅ More cool features...
+## 🔥 Why Use Snort?
+Snort is a popular, open-source Intrusion Detection and Prevention System (IDS/IPS) that monitors network traffic to spot and stop suspicious activity, keeping systems safe. This guide will help you set up and run Snort on Ubuntu.
+
+## 🔥 How This Helps
+**Real-Time Monitoring**  
+Snort watches network traffic and alerts to any suspicious activity.
+
+**Customizable Alerts**  
+Rules can be tailored to detect specific threats relevant to the network.
+
+**Community Rules**  
+Regular updates help stay protected against new threats.
 
 ## 🛠️ Installation
-### Prerequisites
-Ensure you have the following installed:
-- Python 3.x
-- Required dependencies (see `requirements.txt`)
+### Step 1: Install Snort
+- Open the terminal and install Snort:
 
-### Steps
-1. Clone the repository:
    ```bash
-   git clone https://github.com/your-username/your-repository.git
+   sudo apt-get install snort -y
    ```
-2. Navigate to the project directory:
+- Set HOME_NET to your network (e.g., 192.168.0.0/24).
+- Verify the installation by running:
    ```bash
-   cd your-repository
+   snort --version
    ```
-3. Install dependencies:
-   ```bash
-   pip install -r requirements.txt
-   ```
-4. Run the project:
-   ```bash
-   python main.py
-   ```
-
 ## 🎮 Usage
 - Describe how to use the project
 - Example command-line usage:

@@ -90,16 +90,15 @@ alert icmp any any -> $HOME_NET any (msg: "ICMP PING DETECTED"; sid:1000001; rev
 <br>
 
 ## 🔚 Conclusion
-- Now that Snort is set up, it can spot and get alerts on any suspicious network activity. Keeping an eye on it and updating regularly will help keep the network safe.
+Now that Snort is set up, it can spot and get alerts on any suspicious network activity. Keeping an eye on it and updating regularly will help keep the network safe.
 
 ## 👤 Author
-- **Tony Pham** – [GitHub](https://github.com/itstonypham) | [LinkedIn](https://www.linkedin.com/in/itstonypham/)
+**Tony Pham** – [GitHub](https://github.com/itstonypham) | [LinkedIn](https://www.linkedin.com/in/itstonypham/)
 
 ## 🤝 Contributing
 Pull requests are welcome. For major changes, please open an issue first to discuss.  
 
 
-## ⭐ Acknowledgments
-- Thanks to contributors and resources that helped with the project.
+## ⭐ AcknowledgmentsThanks to contributors and resources that helped with the project.
 
 ---
